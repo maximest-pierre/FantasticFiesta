@@ -1,0 +1,6 @@
+django
+psycopg2
+flake8
+pep8
+coverage
+python-coveralls
