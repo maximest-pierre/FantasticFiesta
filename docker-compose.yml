@@ -3,7 +3,6 @@ version: '3.4'
 services:
   web:
     build: ./
-    tty: true
     volumes:
       - .:/code
     ports:
@@ -16,3 +15,12 @@ services:
       POSTGRES_USER: contact
       POSTGRES_PASSWORD: contact
       POSTGRES_DB: contact
+  livereload:
+    build:
+      context: ./
+      target: build
+    command: npm run-script watch
+    volumes:
+      - /code/assets/output:/code/assets/output:rw
+    ports:
+      - "8081:8081"
