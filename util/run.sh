@@ -13,7 +13,6 @@ if [ "$RUN_MIGRATE" != 0 ]; then
 fi
 
 printf "#--- Run development server ---# \n"
-python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
 
 exit 0
-

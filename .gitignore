@@ -102,3 +102,10 @@ ENV/
 
 # PyCharm project settings
 .idea
+
+#env
+fantasticfiesta/*
+
+assets/output/*
+
+node_modules/*

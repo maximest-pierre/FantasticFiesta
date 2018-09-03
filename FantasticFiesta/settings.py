@@ -30,7 +30,7 @@ SECRET_KEY = '6%ya$@_-1z89gg_%#%t$cp&f0159xa)5819hy$tu3iy^!p*!@r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -139,3 +139,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    # Output directory of webpack
+    os.path.join(BASE_DIR, 'assets', 'output'),
+)
