@@ -24,10 +24,12 @@ RUN apk add --no-cache \
     libpng \
     libpq \
     gettext \
+    jpeg-dev \
     postgresql-client \
     postgresql-dev \
     uwsgi \
-    uwsgi-python3
+    uwsgi-python3 \
+    zlib-dev
 
 WORKDIR /code
 COPY ./ /code/
