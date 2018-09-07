@@ -2,5 +2,40 @@
 
 {% load widget_tweaks %}
 {% block content %}
+ <div class="container">
+    <br>
+        <div class="row">
+            <div class="col">
+                <h3>Event</h3>
+            </div>
+            <div class="col text-right">
+                 <a class="btn btn-success" href="#">Add Event</a>
+            </div>
 
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Contact</th>
+                        <th>Date</th>
+                        <th>Note</th>
+                        <th>Status</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for event in events %}
+                    <tr>
+                        <td>{{event.contact.last_name}}, {{event.contact.first_name}}</td>
+                        <td>{{event.date}}</td>
+                        <td>{{event.note}}</td>
+                        <td>{{event.get_status_display}}</td>
+                        <td><a class="btn btn-success" href="#"">Edit Event</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
 {% endblock %}

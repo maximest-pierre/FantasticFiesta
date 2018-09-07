@@ -11,6 +11,6 @@ class DashboardView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        context['event'] = Event.objects.filter(user=self.request.user)
+        context['events'] = Event.objects.filter(user=self.request.user)
 
         return context
