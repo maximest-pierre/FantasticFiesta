@@ -26,6 +26,7 @@ urlpatterns = [
     path('dashboard/', include(('dashboard.urls', 'dashboard'), namespace='dashboard')),
     url(r'^$', DashboardView.as_view()),
     path('account/', include(('login.urls', 'login'), namespace='login')),
+    path('event/', include(('event.urls', 'event'), namespace='event')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

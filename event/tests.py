@@ -14,9 +14,7 @@ class TestEvent(TestCase):
 
         cls.user = UserFactory()
 
-        cls.contact = ContactFactory(
-            added_by=cls.user
-        )
+        cls.contact = ContactFactory()
 
         cls.event_status_planned = EventFactory(
             status='P',

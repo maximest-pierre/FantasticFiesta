@@ -20,4 +20,4 @@ class ContactFactory(factory.DjangoModelFactory):
     last_name = factory.Faker('last_name')
     email = factory.Faker('email')
     profil_picture = factory.django.ImageField(color='blue')
-    added_by = UserFactory()
+    added_by = factory.SubFactory(UserFactory)
