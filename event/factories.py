@@ -9,7 +9,7 @@ class EventFactory(factory.DjangoModelFactory):
     class Meta:
         model = Event
 
-    contact = factory.RelatedFactory(ContactFactory)
+    contact = ContactFactory()
     status = 'P'
     note = 'test'
     date = datetime.datetime.now()

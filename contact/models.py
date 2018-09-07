@@ -24,6 +24,6 @@ class Contact(models.Model):
     )
 
     def __str__(self):
-        return "%s, %s created by %s" % (
-            self.last_name, self.first_name, self.added_by
+        return "%s, %s" % (
+            self.last_name, self.first_name
         )

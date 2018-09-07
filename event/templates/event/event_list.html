@@ -9,7 +9,7 @@
                 <h3>Event</h3>
             </div>
             <div class="col text-right">
-                 <a class="btn btn-success" href="#">Add Event</a>
+                 <a class="btn btn-success" href="{% url "event:create_event" %}">Add Event</a>
             </div>
 
 
@@ -21,6 +21,7 @@
                         <th>Note</th>
                         <th>Status</th>
                         <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,7 +31,8 @@
                         <td>{{event.date}}</td>
                         <td>{{event.note}}</td>
                         <td>{{event.get_status_display}}</td>
-                        <td><a class="btn btn-success" href="#"">Edit Event</a></td>
+                        <td><a class="btn btn-success" href="{% url "event:update_event" pk=event.id%}">Edit Event</a></td>
+                        <td><a class="btn btn-success" href="#">Delete Event</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
