@@ -18,3 +18,4 @@ exclude_patterns:
 - "docs/**/*"
 - "**/migrations/*"
 - "**/settings.py"
+- "**/urls.py"

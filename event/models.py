@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 from contact.models import Contact
@@ -18,3 +19,4 @@ class Event(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICE)
     note = models.TextField()
     date = models.DateTimeField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)

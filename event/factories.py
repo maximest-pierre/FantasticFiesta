@@ -1,7 +1,7 @@
 import datetime
 import factory
 
-from contact.factories import ContactFactory
+from contact.factories import ContactFactory, UserFactory
 from event.models import Event
 
 
@@ -13,3 +13,4 @@ class EventFactory(factory.DjangoModelFactory):
     status = 'P'
     note = 'test'
     date = datetime.datetime.now()
+    user = UserFactory()

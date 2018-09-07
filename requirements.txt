@@ -6,3 +6,4 @@ coverage
 python-coveralls
 pillow
 factory-boy
+django-widget-tweaks

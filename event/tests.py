@@ -22,19 +22,22 @@ class TestEvent(TestCase):
             status='P',
             note='test',
             date=cls.time,
-            contact=cls.contact
+            contact=cls.contact,
+            user=cls.user
         )
         cls.event_status_ongoing = EventFactory(
             status='O',
             note='test',
             date=cls.time,
-            contact=cls.contact
+            contact=cls.contact,
+            user=cls.user
         )
         cls.event_status_completed = EventFactory(
             status='C',
             note='test',
             date=cls.time,
-            contact=cls.contact
+            contact=cls.contact,
+            user=cls.user
         )
 
     def test_planned_status(self):
