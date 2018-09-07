@@ -15,11 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import path, include
+
+from dashboard.views import DashboardView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('dashboard/', include(('dashboard.urls', 'dashboard'), namespace='dashboard')),
+    url(r'^$', DashboardView.as_view()),
+    path('account/', include(('login.urls', 'login'), namespace='login')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
