@@ -40,6 +40,11 @@ class UpdateEvent(UpdateView, LoginRequiredMixin):
     form_class = CreateEventForm
     success_url = '/'
 
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
+
 
 class DeleteEvent(DeleteView, LoginRequiredMixin):
     model = Event
