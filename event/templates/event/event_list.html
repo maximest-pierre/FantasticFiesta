@@ -32,7 +32,7 @@
                         <td>{{event.note}}</td>
                         <td>{{event.get_status_display}}</td>
                         <td><a class="btn btn-success" href="{% url "event:update_event" pk=event.id%}">Edit Event</a></td>
-                        <td><a class="btn btn-success" href="#">Delete Event</a></td>
+                        <td><a class="btn btn-success" href="{% url "event:delete_event" pk=event.id%}">Delete Event</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>

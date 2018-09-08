@@ -38,8 +38,10 @@ class UpdateEvent(UpdateView, LoginRequiredMixin):
     model = Event
     template_name = 'event/update_event.html'
     form_class = CreateEventForm
+    success_url = '/'
 
 
 class DeleteEvent(DeleteView, LoginRequiredMixin):
     model = Event
     template_name = 'event/delete_event.html'
+    success_url = '/'
