@@ -24,7 +24,7 @@ from dashboard.views import DashboardView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dashboard/', include(('dashboard.urls', 'dashboard'), namespace='dashboard')),
-    url(r'^$', DashboardView.as_view()),
+    url(r'^$', DashboardView.as_view(), name="dashboard"),
     path('account/', include(('login.urls', 'login'), namespace='login')),
     path('event/', include(('event.urls', 'event'), namespace='event')),
     path('contact/', include(('contact.urls', 'contact'), namespace='contact')),
