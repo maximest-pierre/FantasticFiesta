@@ -16,9 +16,5 @@ The application should now be running
 
 ### Creating the super user
 
-`docker exec -it fantasticfiesta_web_1 bash`
-
-## known bug
-- There is currently a bug when editing a contact. The dropdown is not filtering correctly
-
- 
+* `docker exec -it fantasticfiesta_web_1 bash`
+* `python3 manage.py createsuperuser`
